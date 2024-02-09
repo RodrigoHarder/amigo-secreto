@@ -20,6 +20,10 @@ const Sorteio = () => {
         if (resultado.has(participanteDaVez)) {
             setAmigoSecreto(resultado.get(participanteDaVez)!)
         }
+        setTimeout(()=>{
+            setAmigoSecreto("")
+        },5000)
+        return
     }
 
     return (<Card>
@@ -40,9 +44,6 @@ const Sorteio = () => {
                 <button className="botao-sortear">Sortear</button>
             </form>
             {amigoScreto && <p className="resultado" role="alert">{amigoScreto}</p>}
-            {setTimeout(()=>{
-                setAmigoSecreto("")
-            },5000)}
             <footer className="sorteio">
                 <img src="/imagens/aviao.png" className="aviao" alt="Um desenho de um avião de papel" />
             </footer>
