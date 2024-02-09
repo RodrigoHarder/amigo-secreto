@@ -30,7 +30,7 @@ const Sorteio = () => {
                     required
                     name="participanteDavez"
                     id="participanteDavez"
-                    placeholder="Selecione o seu nome"
+                    placeholder="Selecione o participante"
                     value={participanteDaVez}
                     onChange={evento => setParticipanteDaVez(evento.target.value)}
                 ><option>Selecione seu nome</option>
@@ -40,6 +40,9 @@ const Sorteio = () => {
                 <button className="botao-sortear">Sortear</button>
             </form>
             {amigoScreto && <p className="resultado" role="alert">{amigoScreto}</p>}
+            {setTimeout(()=>{
+                setAmigoSecreto("")
+            },5000)}
             <footer className="sorteio">
                 <img src="/imagens/aviao.png" className="aviao" alt="Um desenho de um avião de papel" />
             </footer>
